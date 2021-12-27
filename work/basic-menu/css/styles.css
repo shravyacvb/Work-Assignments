@@ -1,0 +1,134 @@
+/******************************************
+These are styles for Elements 
+******************************************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: azure;
+    font-family: sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.2vh;
+    margin: 0;
+    position: relative;
+}
+
+header{
+    background-color: #50b4db9c;
+    display: grid;
+    grid-template-areas: "logo header" "content content" "footer footer";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+    grid-area: header;
+}
+
+li {
+    margin: 0;
+    padding: 0.4rem;
+}
+
+main { 
+    background-color: #edfdfd;
+    border: 3px solid #2b63e233;
+    box-shadow: 5px 1px #ffc9ff78;
+    display: inline-block;
+    font-family: cursive;
+    grid-area: content;
+    margin: 9% 20%;
+    padding: 2rem;
+}
+
+footer {
+    align-items: center;
+    background-color: #50b4db9c;
+    bottom: 0;
+    display: flex;
+    font-size: 10px;
+    font-family: inherit;
+    font-weight: 500;
+    grid-area: footer;
+    height: 3rem;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+
+footer a {
+    text-decoration-line: underline;
+}
+
+/**************************************************************** 
+These styles are for elements inside Header in Hierarchical way 
+*****************************************************************/
+
+header ul {
+    align-items: center;
+    border-bottom: 2px solid navy;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header .logo {
+    grid-area: logo;
+    height: auto;
+    width: 3rem;
+}
+
+/****************************************** 
+These styles are for Menu Bar 
+******************************************/
+
+.menu > li {
+    padding: 0 1rem;
+    position: relative;
+}
+
+.menu button {
+    background-color: transparent;
+    border: 0;
+    font: inherit;
+}
+
+.menu > li:hover .submenu, 
+.menu > li:focus-within .submenu{
+    display: block;
+    max-height: 90vh;
+    padding: 0.7rem;
+    visibility: visible;
+    width: auto;
+}
+
+/****************************************** 
+These styles are for Submenu 
+******************************************/
+
+.submenu {
+    background-color: #75d2e957;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 1rem;
+    transition: max-height 1s;
+    visibility: hidden;
+}
+
+.submenu a {
+    color: black;
+    padding: 0.25rem 0rem;
+    text-decoration-line: blink;
+}
+
+.submenu li:hover {
+    background-color: cornflowerblue;
+}
+
+.submenu li:hover a{
+    color: white;
+}
+
+

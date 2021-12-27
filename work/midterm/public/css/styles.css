@@ -1,0 +1,521 @@
+/******************************************
+These are styles for Elements 
+******************************************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: azure;
+    font-size: 14px;
+    letter-spacing: 0.2vh;
+    margin: 0;
+    position: relative;
+    padding-bottom: 3rem;
+}
+
+header{
+    background-color: #50b4db9c;
+    display: grid;
+    grid-template-areas: "logo header header" "content content content" "footer footer footer";
+    grid-template-columns: auto 1fr;
+    grid-area: header;
+}
+
+li {
+    margin: 0;
+    padding: 0.4rem;
+}
+
+main {
+    grid-area: content;
+}
+
+footer {
+    align-items: center;
+    background-color: #50b4db9c;
+    bottom: 0;
+    display: flex;
+    font-size: 10px;
+    font-family: inherit;
+    font-weight: 500;
+    grid-area: footer;
+    height: 2rem;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+
+footer a {
+    text-decoration-line: underline;
+}
+
+/**************************************************************** 
+These styles are for elements inside Header in Hierarchical way 
+*****************************************************************/
+
+header ul {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+}
+
+header .logo {
+    grid-area: logo;
+    height: auto;
+    width: 4rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    background-color: #101010;
+    display: block;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    width: 25px;
+}
+
+.content { 
+    background-color: #edfdfd;
+    border: 3px solid #2b63e233;
+    box-shadow: 5px 1px #ffc9ff78;
+    display: inline-block;
+    font-family: cursive;
+    margin: 9% 20%;
+    padding: 2rem;
+}
+
+/****************************************** 
+These styles are for Menu Bar 
+******************************************/
+
+.menu-bar > li {
+    padding: 1rem 0;
+    position: relative;
+}
+
+.menu-bar li a {
+    color: navy;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.menu-bar button {
+    background-color: transparent;
+    border: 0;
+    font: inherit;
+}
+
+.menu-bar > li:hover .submenu, 
+.menu-bar > li:focus-within .submenu{
+    border-bottom: 2px solid navy;
+    display: block;
+    max-height: 90vh;
+    padding: 1rem;
+    visibility: visible;
+    width: auto;
+}
+
+/****************************************** 
+These styles are for Submenu 
+******************************************/
+
+.submenu {
+    background-color: #8ed1e9;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 2rem;
+    transition: max-height 1s;
+    visibility: hidden;
+}
+
+.submenu a {
+    color: black;
+    text-decoration-line: blink;
+}
+
+.submenu li:hover {
+    background-color: cornflowerblue;
+}
+
+.submenu li:hover a{
+    color: white;
+}
+
+
+/****************************************** 
+These styles are for form 
+******************************************/
+
+.form-container {
+    background-color: #f9f8f863;
+    flex-wrap: wrap;
+    padding: 1rem;
+    text-align: center;
+}
+
+form {
+    color: #1c448c;
+    font-size: medium;
+}
+
+.label-input label {
+    display: block;
+}
+
+.label-input input {
+    width: 30%;
+}
+
+.label-input {
+    padding: 0.5rem;
+}
+
+.p-required {
+    color: #ff0000c4;
+}
+
+.required:after {
+    content: '*';
+    color: #ff0000c4;
+}
+
+input, select  {
+    border: 1px solid #80a0c1;
+    color: #2f2b2b;
+    margin: 0.2rem;
+    padding: 1%;
+}
+
+.button-style {
+    background-color: #1149cacf;
+    color: white;
+    font-size: medium;
+    margin: 1rem;
+    padding: 0.3rem;
+}
+
+:disabled {
+    background: grey;
+}
+
+/****************************************** 
+These styles are for animation
+******************************************/
+
+@media (prefers-reduced-motion : no-preference) {
+    main {
+        animation-name: fadeIn, moveLeft300px, bounce;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+    }
+    
+    @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
+}
+
+/*********************************************************** 
+These styles are for Shopping, Recipes and Places to visit
+************************************************************/
+
+.shop-grid {
+    display: inline-flex;
+}
+
+.shop-image { 
+    margin: 2rem;
+}
+
+.shop-content {
+    margin: 2rem 2rem 0 0;
+}
+
+.shop-content p {
+    font-style: cursive;
+}
+
+.poster-shop {
+    height: 46vh;  
+    width: 33vh;
+}
+
+/*********************************************************** 
+These styles are for Find @W Page
+************************************************************/
+
+.find-summary {
+    display: inline-block;
+    font-family: cursive;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+.find-elements {
+    display: grid;
+    grid-template-areas: "shop recipes places";
+}
+
+.find-elements img {
+    height: 35vh;
+    margin: 0.5rem;
+    width: 23vh;
+}
+
+.find-elements a {
+    text-align: center;
+}
+
+.find-elements p {
+    text-align: inherit;
+}
+
+/************************************************** 
+This style is for form submission acknowledgement
+*****************************************************/
+
+.form-filled-content {
+    background-color: #edfdfd;
+    border: 3px solid #2b63e233;
+    box-shadow: 5px 1px #ffc9ff78;
+    display: inline-block;
+    font-family: cursive;
+    margin: 10% 38%;
+    padding: 2rem;
+}
+
+
+/****************************************** 
+These styles are for Adaptive Behavior
+******************************************/
+
+@media only screen and (max-width : 700px) {
+
+
+    /****************************************** 
+    Adaptive : These styles are for Menu bar
+    ******************************************/
+
+    .menu-bar {
+        background-color: #8ed1e9;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+        flex-direction: column;
+        left: -100%;
+        position: absolute;
+        text-align: center;
+        top: 3.4rem;
+        transition: 0.3s;
+        width: 100%;
+    }
+
+    .menu-bar.active {
+        left: 0;
+    }
+
+    .menu-bar li {
+        margin: 0.5rem 0;
+    }
+
+    /****************************************** 
+    Adaptive : These styles are for Hamburger
+    ******************************************/
+
+    .hamburger {
+        cursor: pointer;
+        display: block;
+        padding: 1rem;
+        position: absolute;
+        right: 2;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /****************************************** 
+    Adaptive : These styles are for Submenu
+    ******************************************/
+
+    .submenu {
+        background-color: #8ed1e9;
+        max-height: 0;
+        overflow: hidden;
+        position: inherit;
+        top: 1rem;
+        transition: max-height 1s;
+        visibility: hidden;
+    }
+
+    .submenu li {
+        border-width: 0px 1px;
+        border-style: solid;
+        border-color: navy;
+    }
+
+    .menu-bar > li:hover .submenu, .menu-bar > li:focus-within .submenu {
+        border-bottom: 0;
+        display: flex;
+        max-height: 0;
+    }
+
+    /******************************************************************** 
+    Adaptive : These styles are for Find @W page
+    *********************************************************************/
+
+    .find-elements {
+        display: inline-block;
+    }
+
+    .find-elements img {
+        height: 60vh;
+        margin: 0.5rem;
+        width: 45vh;
+    }
+
+    .find-elements a {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /******************************************************************** 
+    Adaptive : These styles are for Shopping, Recipes and Places to visit
+    *********************************************************************/
+
+    .shop-grid {
+        display: inline-block;
+        padding: 1rem;
+    }
+
+    .shop-image {
+        margin: 0;
+    }
+
+    .poster-shop {
+        height: 50vh;
+        margin: 0.5rem;
+        width: 40vh;
+    }
+
+
+    /******************************************************************** 
+    Adaptive : These styles are for form submission acknowledgement
+    *********************************************************************/
+
+    .form-filled-content {
+        margin: 10% 22%;
+    }
+
+}
+
+/****************************************** 
+These styles are for Mobile
+******************************************/
+
+@media only screen 
+and (min-device-width : 300px)
+and (max-device-width : 820px) {
+
+
+    /****************************************** 
+    Mobile : These styles are for Header
+    ******************************************/
+
+    .menu-bar li a {
+        font-weight: 700;
+        font-size: 28px;
+    }
+
+    header {
+        height: 7vh;
+    }
+
+    header .logo {
+        width: 11rem;
+    }
+
+    .bar {
+        height: 0.5rem;
+        width: 4rem;
+    }
+
+    .submenu {
+        top: 3rem;
+    }
+
+    /****************************************** 
+    Mobile : These styles are for Content
+    ******************************************/
+
+    main {
+        font-size: 16px;
+    }
+
+    /****************************************** 
+    Mobile : These styles are for Form
+    ******************************************/
+
+    .label-input label {
+        font-size: 28px;
+    }
+
+    .label-input input {
+        font-size: 22px;
+        width: 60%;
+    }
+
+    input, select {
+        font-size: 22px;
+        padding: 2%;
+    }
+
+    /****************************************** 
+    Mobile : These styles are for Hamburger
+    ******************************************/
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-18px) rotate(-45deg);
+    }
+
+    /********************************************************************** 
+    Mobile : These styles are for Shopping, Recipes and PLaces to visit
+    ***********************************************************************/
+
+    .poster-shop {
+        height: 126%;
+        width: 90%;
+    }
+
+    /****************************************** 
+    Mobile : These styles are for Find @W page
+    ******************************************/
+
+    .find-elements img {
+        margin: 0.5rem;
+        width: 92%;
+    }
+
+}
+
+
+
+
+

@@ -1,0 +1,61 @@
+#homepage {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar content content"
+        "footer footer footer";
+}
+
+.menu {
+    margin: 0;
+    background-color: plum;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+} 
+
+li:hover {
+    background-color: rebeccapurple;
+}
+
+.menu li:hover a {
+    color: white;
+}
+
+.local-menu li:hover {
+    background-color: plum;
+}
+
+main {
+    background-color: pink;
+    grid-area: content;
+    padding: 0.5rem;
+}
+
+.local-menu {
+    background-color: pink;
+    border-right: 1px solid black;
+    grid-area: sidebar;
+}
+
+li {
+    list-style-type: none;
+    padding: 1rem;
+    margin: 0;
+}
+
+footer {
+    background-color: plum;
+    grid-area: footer;
+    padding: 1rem;
+}
+
+header {
+    grid-area: header;
+}
+
+ul {
+    padding: 0;
+}
+
+

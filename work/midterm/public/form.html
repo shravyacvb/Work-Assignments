@@ -1,0 +1,75 @@
+<!-- doctype html -->
+<html>
+    <head>
+        <title>Discover Washington</title>
+        <link rel="stylesheet" href="css/styles.css"/>
+    </head>
+    <body>
+        <header>
+          <a href="./index.html"><img class="logo" src="img/logo_f.jpg" alt="Discover Washington"></a>
+            <ul class="menu-bar">
+              <li>
+                <a href="./index.html">Home</a>
+              </li>
+              <li>
+                <a href="./find.html">Find @W</a>
+                <ul class="submenu">
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li><a href="./recipe.html">Recipes</a></li>
+                    <li><a href="./place.html">Places</a></li>
+                </ul>
+              </li>
+              <li>
+                  <a href="#">Sign up</a>
+              </li>
+            </ul>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+        </header>
+        <main>
+            <div class="form-container">
+                <form id="form" action="/form" method="POST">
+                  <div class="label-input">
+                    <label class="required" for="name">Name</label>
+                    <input type="text" name="field" id="name" required>
+                  </div>
+                  <div class="label-input">
+                    <label class="required" for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                  </div>
+                  <div class="label-input">
+                    <label class="required" for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone" required>
+                  </div>
+                  <div class="label-input">
+                    <label for="tier">Do you live in Washington?</label>
+                    <select id="tier">
+                      <option value="" selected disabled>Please Select</option>
+                      <option value="1">Yes</option>
+                      <option value="2">No</option>
+                    </select>
+                  </div>
+                  <div class="label-input">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address">
+                  </div>
+                  <div class="">
+                    <input type="checkbox" name="annoy_me" id="annoy_me">
+                    <label for="annoy_me">Do you want to receive emails regarding updates?</label>
+                  </div>
+                  <a href="./filledForm.html">  
+                    <button id="submit-button" class="button-style"  type="submit" disabled>Submit</button>
+                  </a>
+                  <p class="p-required">* <span>required field</span></p>
+                </form>
+              </div>
+        </main>
+        <script src="./index.js"></script>
+        <footer>
+          <p>Tools used to create images Canva.com</p>
+        </footer>
+    </body>
+</html>
